@@ -3,7 +3,9 @@
 This repository contains the source code for **Ameer Hamza's** personal portfolio website, designed to showcase expertise in **software development**. The website highlights projects, skills, and achievements elegantly and interactively.  
 
 ## **🚀 Live Demo**  
-🔗 **Live on Firebase Cloud:** [Ameer Hamza's Portfolio](https://ameerhumza.web.app/)  
+🔗 **Live on Vercel:** (https://portfolio-ivory-sigma-64.vercel.app/)
+🔗 **Live on Firebase Cloud:** [Ameer Hamza's Portfolio](https://ameerhumza.web.app/) 
+
 
 ## **🛠️ Technologies Used**  
 - **HTML, CSS, JavaScript** – Core web technologies for structure, styling, and interactivity.  
