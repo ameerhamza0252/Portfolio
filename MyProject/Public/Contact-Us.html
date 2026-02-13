@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="shortcut icon" href="./logo/logo2.svg"/>
+    <link href='https://fonts.googleapis.com/css?family=Biryani' rel='stylesheet'>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
+    <link rel="stylesheet" href="./text.css" type="text/css">
+    <link rel="stylesheet" href="./animation.css" type="text/css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: none;
+            background-color: #121212;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            margin-top: 50px;
+        }
+        .contact-form {
+            padding: 20px;
+            border-radius: 5px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 80%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            background-color: #333;
+            color: #fff;
+            display: flex;
+            border-radius: 10px;
+            outline:none;
+            height: 30px;
+            font-family:Arial, Helvetica, sans-serif;
+            font-weight: 400;
+            font-size: 15px;
+        }
+        .contact-form *:focus{
+            background-color: #121212;
+            border: 2px solid #2ECC40;
+        }
+        .contact-form button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #2ECC40;
+            color: #f2f2f2;
+            cursor: pointer;
+            border-radius:2px ;
+            height: 50px;
+            width: 130px;
+            margin: 6px;
+        }
+        .contact-form button:hover {
+            background-color: #18e423;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div>
+            <a href="https://ameerhumza.web.app/">
+                <img src="./logo/logo.svg" alt="ameerhamza-logo" id='header_logo' > 
+              </a> 
+        </div>
+        <button id="btn_nav" onclick="menu()"><i class="fa fa-fw fa-bars"></i></button>
+        <div class="header_list" id="top">
+            <ul>
+                <li><a href="https://ameerhumza.web.app/"><i class="fa fa-fw fa-home" ></i>Home</a></li>
+                <li><a href="https://ameerhumza.web.app/#service_box"><i class="fa fa-fw fa-briefcase"></i>Services</a></li>
+                <li><a href="https://ameerhumza.web.app/Contact-Us.html"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+            </ul>
+        </div>
+        <div class="progress-bar-container">
+            <div class="progress-bar"></div>
+        </div>
+    </header>
+    <div class="container">
+    
+        <div id="Div_textService">
+            <h1 id="textService">Contact<span id="txt02"> Form</span></h1>
+     
+        </div>
+  
+        <form class="contact-form">
+            <input type="text" name="name" id="fname" value="" placeholder="Your Name" required >
+            <input type="email" name="email" id="email" value="" placeholder="Your Email" required >
+            <textarea type="text" name="message" id="message" value="" placeholder="Your Message" style="max-width: 600px; height:200px;" required></textarea>
+            <button type="submit" value="submit" id="OnSubmit">Submit</button>
+            <div class="Alert" id="success">
+                <p>You message has been sent<br>We will get back to you shortly <i class="fa fa-fw fa-smile-o"></i></p>
+            </div>
+            <div class="Alert" id="fail">
+                <p>Unexpected Error !<br>Form not submitted<i class="fa fa-fw fa-meh-o"></i></p>
+            </div>
+        </form>
+        
+    </div>
+    <div class="footer">
+        <div class="container2">
+            <div class="footer-row">
+                <div class="footer-col">
+                    <h4>get help</h4>
+                    <ul>
+                        <li><a href="https://ameerhumza.web.app/Contact-Us.html">FAQ</a></li>
+                        <li><a href="https://github.com/ameerhamza0252">Projects</a></li>
+                      </ul>
+                    </div>  
+                    <div class="footer-col">
+                      <h4>Contact</h4>
+                      <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ameer-hamza-b7804523b/"><i class="fa fa-fw fa-linkedin"></i></a>
+                        <a href="https://github.com/ameerhamza0252"><i class="fa fa-fw fa-github"></i></a>
+                        <a href="https://www.instagram.com/ameer_hamza_aka_hamo/"><i class="fa fa-fw fa-instagram"></i></a>
+                      </div>
+                </div>
+            </div>
+        </div>
+   </footer>
+   <script src="./header.js"></script>
+   <script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-app.js";
+    import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.11.1/firebase-analytics.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    const firebaseConfig = {
+      apiKey: "AIzaSyAvNsF0P4STuEIMBDbjAsYGjMyk5HZvuEs",
+      authDomain: "khalif-neo.firebaseapp.com",
+      databaseURL: "https://khalif-neo-default-rtdb.europe-west1.firebasedatabase.app",
+      projectId: "khalif-neo",
+      storageBucket: "khalif-neo.appspot.com",
+      messagingSenderId: "772421894426",
+      appId: "1:772421894426:web:fc7610a4787142b2a1aca3",
+      measurementId: "G-40XR1JG3VY"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+    const analytics = getAnalytics(app);
+    import {getDatabase,ref,push} from 'https://www.gstatic.com/firebasejs/10.11.1/firebase-database.js';
+    const db = getDatabase();
+    const SubmitButton=document.getElementById("OnSubmit");
+    function emailIsValid(email) {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    }
+    SubmitButton.addEventListener('click',(event)=>{
+        event.preventDefault();
+        let ClientFname=document.getElementById("fname");
+        let ClientEmail=document.getElementById("email");
+        let ClientMessage=document.getElementById("message");
+        const success = document.getElementById("success");
+        const fail = document.getElementById("fail");
+        let flag1=false;
+        let flag2=false;
+        let flag3=false;
+        if(ClientFname.value ==""){
+            ClientFname.style.border="2px solid red";
+            flag1=false;
+        }
+        else{
+            ClientFname.style.border="2px solid green";
+            flag1=true;
+        }
+        if(!emailIsValid(ClientEmail.value)){
+            ClientEmail.style.border="2px solid red";
+            flag2=false;
+        }
+        else{    
+            ClientEmail.style.border="2px solid green";
+            flag2=true;
+        }
+        if(ClientMessage.value==""){
+            ClientMessage.style.border="2px solid red";
+            flag3=false;
+        }
+        else{
+            ClientMessage.style.border="2px solid green";
+            flag3=true;
+        }
+    if(flag1&flag2&flag3){
+    let cmail=ClientEmail.value;
+    cmail=cmail.slice(0,cmail.indexOf("@"));
+    console.log(cmail);
+    push(ref(db,cmail),{
+      Name:ClientFname.value,
+      Email:ClientEmail.value,
+      Message:ClientMessage.value
+    }).then(()=>{
+        success.style.display = "block";
+        setTimeout(()=>{
+            success.style.display = "none";
+        }, 5000)
+        ClientFname.value="";
+        ClientEmail.value="";
+        ClientMessage.value="";
+    }).catch((error)=>{
+        fail.style.display = "block";
+        setTimeout(()=>{
+            fail.style.display = "none";
+        }, 5000)
+        console.log(error);
+    });
+}
+})
+  </script>
+</body>
+</html> 

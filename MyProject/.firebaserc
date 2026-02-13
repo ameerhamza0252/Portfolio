@@ -1,0 +1,16 @@
+{
+  "projects": {
+    "production": "ameerhamza-6a444",
+    "staging": "khalif-neo"
+  },
+  "targets": {
+    "khalif-neo": {
+      "hosting": {
+        "site1": [
+          "ameerhumza"
+        ]
+      }
+    }
+  },
+  "etags": {}
+}

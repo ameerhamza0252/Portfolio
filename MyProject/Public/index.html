@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="HandheldFriendly" content="true" />
+  <meta name="language" content="english">
+  <meta name="Author" content="Ameer Hamza">
+  <meta name="description"
+    content="Ameer Hamza's software development portfolio expertise in HTML, CSS, JavaScript, ReactJS and Bootstrap.Hire Ameer Hamza as you web developer">
+  <meta name="rating" content="safe for kids">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="shortcut icon" href="./logo/logo2.svg" />
+  <link href='https://fonts.googleapis.com/css?family=Biryani' rel='stylesheet'>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet"
+    type="text/css">
+
+  <link rel="stylesheet" href="style.css" type="text/css">
+  <link rel="stylesheet" href="./text.css" type="text/css">
+  <link rel="stylesheet" href="./animation.css" type="text/css">
+<style>
+  .banner_text {
+    position: relative; /* Required so the absolute canvas stays inside here */
+    overflow: hidden;   /* Prevents particles from bleeding out */
+  }
+
+  #gravityCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Sits above the background image, but below the text */
+    pointer-events: none; /* Allows you to still click buttons/text through the canvas */
+  }
+
+  /* Ensure your text/SVG content is above the canvas */
+  #svg_and_text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left:  50%;
+    z-index: 2;
+  }
+</style>
+  <title>Ameer Hamza</title>
+</head>
+
+<body>
+  <div class="header1">
+    <strong>Software Solutions!</strong>
+    <strong><a href="mailto:ameerhamza0252@gmail.com">Email</a></strong>
+    <strong><a href="tel:923116215842">DialUp</a></strong>
+  </div>
+
+  <header class="header">
+    <div>
+      <a href="https://ameerhumza.web.app/">
+        <img src="./logo/logo.svg" alt="ameerhamza-logo" id='header_logo'>
+      </a>
+    </div>
+    <button id="btn_nav" onclick="menu()"><i class="fa fa-fw fa-bars"></i></button>
+    <div class="header_list" id="top">
+      <ul>
+        <li><a href="https://ameerhumza.web.app/"><i class="fa fa-fw fa-home"></i>Home</a></li>
+        <li><a href="https://ameerhumza.web.app/#service_box"><i class="fa fa-fw fa-briefcase"></i>Services</a></li>
+        <li><a href="https://ameerhumza.web.app/Contact-Us.html"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+      </ul>
+    </div>
+    <div class="progress-bar-container">
+      <div class="progress-bar"></div>
+    </div>
+  </header>
+
+
+
+  <div class="banner">
+   
+    <div class="banner_text">
+      <div id="svg_and_text">
+        <svg id="svg-laptop" height="150px" width="150px" viewBox="0 -297 1618 1618" class="icon" version="1.1"
+          xmlns="http://www.w3.org/2000/svg" fill="#000000">
+          <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+          <defs>
+            <pattern id="imgPattern" patternUnits="userSpaceOnUse" width="1600" height="900">
+              <image href="./logo/code.jpg" x="0" y="0" width="1600" height="900" />
+            </pattern>
+          </defs>
+          <path
+            d="M1495.104759 90.099858C1495.104759 40.373123 1454.731636 0 1405.004901 0H203.686957C153.960221 0 113.587099 40.373123 113.587099 90.099858v810.890624h1381.51766V90.099858z"
+            fill="#2ECC40"></path>
+          <path
+            d="M1435.040885 108.345676c0-23.025834-18.695083-41.71687-41.720917-41.71687H221.932775c-23.025834 0-41.71687 18.691036-41.71687 41.71687v792.644806h1254.82498V108.345676z"
+            fill="url(#imgPattern)" style="background-repeat: no-repeat;"></path>
+          <path
+            d="M927.76019 66.628806h-240.263589v18.780079a18.788174 18.788174 0 0 0 18.776031 18.776032h202.707479a18.788174 18.788174 0 0 0 18.780079-18.776032v-18.780079zM1615.236553 906.99687c0-3.314846-2.691542-6.006387-6.006387-6.006388H6.022577c-3.314846 0-6.006387 2.691542-6.006387 6.006388v54.057486c0 33.152506 26.915415 60.067921 60.067921 60.067921h1495.088569c33.148458 0 60.063874-26.915415 60.063873-60.067921v-54.057486z"
+            fill="#2ECC40"></path>
+          <path
+            d="M987.824063 888.411067h-360.395383c0 31.14498 25.2843 56.425233 56.425233 56.425233h247.544917c31.140933 0 56.425233-25.280253 56.425233-56.425233z"
+            fill="#FFFFFF"></path>
+          <path
+            d="M867.234909 77.55687m-10.928063 0a10.928063 10.928063 0 1 0 21.856126 0 10.928063 10.928063 0 1 0-21.856126 0Z"
+            fill="#2ECC40"></path>
+        </svg>
+        <h1 id="heading_text">Let's Make Your <span class="txt01">Vision</span> A <span>Reality!</span></h1>
+        <span class="banner_btn"><a href="https://github.com/ameerhamza0252" target="_blank"
+            id="banner_btn_filled">GitHub<i class="fa fa-fw fa-github"></i></a><a
+            href="https://www.linkedin.com/in/ameer-hamza-b7804523b/" target="_blank">Linkedin<i
+              class="fa fa-fw fa-linkedin-square"></i></a></span>
+      </div>
+      <!-- Gravity particle canvas (used by the background animation script) -->
+       
+      <div class="thingBox">
+        <div class="thing"></div>
+        <div class="thing"></div>
+        <div class="thing"></div>
+        <div class="thing"></div>
+        <div class="thing"></div>
+        <div class="thing"></div>
+      </div>
+      <canvas id="gravityCanvas"></canvas>
+    </div>
+
+  </div>
+  <div id="Div_textService">
+    <h1 id="textService">Our <span id="txt02">Services</span></h1>
+  </div>
+  <div class='Services' id="service_box">
+
+    <div class='service-container' onmouseover="mouseOver()">
+      <div class='service-card reveal'>
+        <h2 class="cardTitle">Bespoke Softawre</h2>
+        <i class='fa fa-fw fa-apple icons'></i>
+        <i class='fa fa-fw fa-android icons'></i>
+        <i class='fa fa-fw fa-tablet icons'></i>
+        <i class='fa fa-fw fa-mobile icons'></i>
+        <h4>Technology For <span class='txt01'>Your Unique</span> Vision</h4>
+        <p class="cardText">Customization that you love</p>
+      </div>
+      <div class='service-card reveal'>
+        <h2 class="cardTitle">Web Developement</h2>
+        <i class='fa fa-fw fa-wordpress icons'></i>
+        <i class='fa fa-fw fa-html5 icons'></i>
+        <i class='fa fa-fw fa-css3 icons'></i>
+        <i class='fa fa-fw fa-database icons'></i>
+        <h4>Responsive and <span class='txt01'>Creative</span> Designs</h4>
+        <p class="cardText">Web services of all technologies</p>
+      </div>
+      <div class='service-card reveal'>
+        <h2 class="cardTitle">Maintenance</h2>
+        <i class='fa fa-fw fa-desktop icons'></i>
+        <i class='fa fa-fw fa-tablet icons'></i>
+        <i class='fa fa-fw fa-tv icons'></i>
+        <i class='fa fa-fw fa-mobile icons'></i>
+        <div>
+          <h4>Upto <span class='txt01'>1 Year</span> of free maintenance</h4>
+          <p class="cardText">6 Month oF Free Maintenance</p>
+        </div>
+      </div>
+      <div class='service-card reveal'>
+        <h2 class="cardTitle">Business Solutions</h2>
+        <i class='fa fa-fw fa-book icons'></i>
+        <i class='fa fa-fw fa-calculator icons'></i>
+        <i class='fa fa-fw fa-calendar icons'></i>
+        <i class='fa fa-fw fa-pie-chart icons'></i>
+        <h4>We Provide <span class='txt01'>Business</span> Solutions</h4>
+        <p class="cardText">Creative Solutions for Your Business</p>
+      </div>
+
+      <div class='service-card reveal'>
+        <h2 class="cardTitle">App Developement</h2>
+        <i class='fa fa-fw fa-apple icons'></i>
+        <i class='fa fa-fw fa-android icons'></i>
+        <i class='fa fa-fw fa-tablet icons'></i>
+        <i class='fa fa-fw fa-mobile icons'></i>
+        <h4>Mobile <span class='txt01'>Application</span> For Smart Devices</h4>
+        <p class="cardText">Building Your Dream App</p>
+      </div>
+      <div class='service-card reveal'>
+        <h2 class="cardTitle">UI/UX Designs</h2>
+        <i class='fa fa-fw fa-laptop icons'></i>
+        <i class='fa fa-fw fa-code icons'></i>
+        <i class='fa fa-fw fa-rocket icons'></i>
+        <i class='fa fa-fw fa-windows icons'></i>
+        <h4>Designing <span class='txt01'>Delightful </span>Interactions</h4>
+        <p class="cardText">Asthethic and Functional Designs</p>
+      </div>
+      <div class="gear">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">
+          <path fill="#ddd" fill-rule="evenodd" d="M110 0c5.523 0 10 4.477 10 10v17.574c0 8.909 10.771 13.37 17.071
+           7.07l12.426-12.426c3.906-3.905 10.237-3.905 14.143 0l14.142 14.142c3.905 3.906
+            3.905 10.237 0 14.142L165.355 62.93c-6.299 6.3-1.838 17.071 7.071 17.071H190c5.523 
+            0 10 4.477 10 10v20c0 5.523-4.477 10-10 10h-17.574c-8.909 0-13.37 10.771-7.071 17.071l12.427
+             12.426c3.905 3.906 3.905 10.237 0 14.143l-14.142 14.142c-3.906 3.905-10.237 3.905-14.143 
+             0l-12.426-12.427c-6.3-6.299-17.071-1.838-17.071 7.071V190c0 5.523-4.477 10-10 10H90c-5.523
+              0-10-4.477-10-10v-17.574c0-8.909-10.771-13.37-17.071-7.071l-12.427 12.427c-3.905 3.905-10.236 3.905-14.142 0L22.218
+               163.64c-3.905-3.906-3.905-10.237 0-14.143l12.427-12.426c6.3-6.3 1.838-17.071-7.071-17.071H10c-5.523 0-10-4.477-10-10V90c0-5.523 
+               4.477-10 10-10h17.574c8.909 0 13.37-10.771 7.07-17.071L22.219 50.502c-3.905-3.905-3.905-10.236 0-14.142L36.36 22.218c3.906-3.905 
+               10.237-3.905 14.142 0L62.93 34.645c6.3 6.3 17.071 1.838 17.071-7.071V10c0-5.523 4.477-10 10-10h20Zm-10 150c27.614 0 50-22.386 
+               50-50s-22.386-50-50-50-50 22.386-50 50 22.386 50 50 50Z" clip-rule="evenodd">
+          </path>
+        </svg>
+      </div>
+      <div class="gear2">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">
+          <path fill="#ddd" fill-rule="evenodd" d="M110 0c5.523 0 10 4.477 10 10v17.574c0 8.909 10.771 13.37 17.071
+           7.07l12.426-12.426c3.906-3.905 10.237-3.905 14.143 0l14.142 14.142c3.905 3.906
+            3.905 10.237 0 14.142L165.355 62.93c-6.299 6.3-1.838 17.071 7.071 17.071H190c5.523 
+            0 10 4.477 10 10v20c0 5.523-4.477 10-10 10h-17.574c-8.909 0-13.37 10.771-7.071 17.071l12.427
+             12.426c3.905 3.906 3.905 10.237 0 14.143l-14.142 14.142c-3.906 3.905-10.237 3.905-14.143 
+             0l-12.426-12.427c-6.3-6.299-17.071-1.838-17.071 7.071V190c0 5.523-4.477 10-10 10H90c-5.523
+              0-10-4.477-10-10v-17.574c0-8.909-10.771-13.37-17.071-7.071l-12.427 12.427c-3.905 3.905-10.236 3.905-14.142 0L22.218
+               163.64c-3.905-3.906-3.905-10.237 0-14.143l12.427-12.426c6.3-6.3 1.838-17.071-7.071-17.071H10c-5.523 0-10-4.477-10-10V90c0-5.523 
+               4.477-10 10-10h17.574c8.909 0 13.37-10.771 7.07-17.071L22.219 50.502c-3.905-3.905-3.905-10.236 0-14.142L36.36 22.218c3.906-3.905 
+               10.237-3.905 14.142 0L62.93 34.645c6.3 6.3 17.071 1.838 17.071-7.071V10c0-5.523 4.477-10 10-10h20Zm-10 150c27.614 0 50-22.386 
+               50-50s-22.386-50-50-50-50 22.386-50 50 22.386 50 50 50Z" clip-rule="evenodd">
+          </path>
+        </svg>
+      </div>
+    </div>
+
+  </div>
+
+  <section id="section-container">
+    <div id="Div_textService">
+      <h1 id="textService">Developement <span id="txt02">Process</span></h1>
+    </div>
+    <section id="conference-timeline">
+      <div class="timeline-start">Start</div>
+      <div class="conference-center-line revealtimeline"></div>
+      <div class="conference-timeline-content">
+
+        <!-- Article -->
+        <div class="timeline-article">
+          <div class="content-left-container">
+            <div class="content-left">
+              <p><span class="article-number"><i class="fa fa fa-search"></i> Research</span>Gather information about
+                project requirements</p>
+            </div>
+          </div>
+          <div class="content-right-container">
+            <div class="content-right">
+              <p><span class="article-number"><i class="fa fa-line-chart"></i> Analysis</span>Evaluate technical
+                feasibility and potential challenges</p>
+            </div>
+          </div>
+          <div class="meta-data">
+            <span class="process">P1</span>
+          </div>
+        </div>
+
+        <div class="timeline-article">
+          <div class="content-left-container">
+            <div class="content-left">
+              <p><span class="article-number"><i class="fa fa fa-paint-brush"></i> Designing</span>Brainstorm ideas and
+                create a preliminary design</p>
+            </div>
+          </div>
+          <div class="content-right-container">
+            <div class="content-right">
+              <p><span class="article-number"><i class="fa fa fa-sliders"></i> Prototyping</span>Develop prototypes to
+                visualize and refine the design</p>
+            </div>
+          </div>
+          <div class="meta-data">
+            <span class="process">P2</span>
+          </div>
+        </div>
+
+        <div class="timeline-article">
+          <div class="content-left-container">
+            <div class="content-left">
+              <p><span class="article-number"><i class="fa fa fa-keyboard-o"></i> Developing</span>Write code according
+                to the design specifications</p>
+            </div>
+          </div>
+          <div class="content-right-container">
+            <div class="content-right">
+              <p> <span class="article-number"><i class="fa fa fa-gears"></i> Testing</span>Conduct thorough testing to
+                identify and fix bugs or errors</p>
+            </div>
+          </div>
+          <div class="meta-data">
+            <span class="process">P3</span>
+          </div>
+        </div>
+
+      </div>
+      <div class="timeline-end">End</div>
+    </section>
+  </section>
+
+
+  <div class="client-review-container">
+    <div id="Div_textService">
+      <h1 id="textService">Testimonials<span id="txt02"></span></h1>
+    </div>
+
+    <div class="client-review-inner-container">
+
+      <div class="client-review-container-card revealcards">
+        <div class="card-top">
+          <div class="client-card-image-box">
+            <img class="client-card-image"
+              src="https://img.freepik.com/free-photo/portrait-white-man-isolated_53876-40306.jpg?w=900&t=st=1711471740~exp=1711472340~hmac=6c7f0a45f021b4bcd16b8f22e1b148c184b8298c80e312367b06c92bb322bc24">
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="client-card-text">
+            <span class="client name">
+              Luke Beardsell
+            </span>
+            <span class="client review">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              I was impressed by the quick turnaround and the quality of the website. It perfectly captures the essence
+              of my brand.
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="client-review-container-card revealcards">
+        <div class="card-top">
+          <div class="client-card-image-box">
+            <img class="client-card-image"
+              src="https://as2.ftcdn.net/v2/jpg/03/83/25/83/1000_F_383258331_D8imaEMl8Q3lf7EKU2Pi78Cn0R7KkW9o.jpg"
+              alt="client-image">
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="client-card-text">
+            <span class="client name">
+              Louise Biggin
+            </span>
+            <span class="client review">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              The attention to detail and the innovative design have set our website apart from competitors. Truly
+              exceptional service!
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="client-review-container-card revealcards">
+        <div class="card-top">
+          <div class="client-card-image-box">
+            <img class="client-card-image"
+              src="https://as2.ftcdn.net/v2/jpg/03/61/34/27/1000_F_361342769_X26dTcofZpukhMGYWFcn1wJNABEFtNLH.jpg">
+          </div>
+        </div>
+        <div class="card-bottom">
+          <div class="client-card-text">
+            <span class="client name">
+              John Edward
+            </span>
+            <span class="client review">
+              <i class="fa fa-quote-left" aria-hidden="true"></i>
+              Our new website is not only visually stunning but also user-friendly. We’ve seen a significant increase in
+              traffic and sales
+              <i class="fa fa-quote-right" aria-hidden="true"></i>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="client-review-box">
+    <i class="fa fa fa-wordpress"></i>
+    <i class="fa fa fa-html5"></i>
+    <i class="fa fa fa-css3"></i>
+    <i class="fa fa fa-desktop"></i>
+    <i class="fa fa fa-database"></i>
+    <i class="fa fa fa-instagram"></i>
+    <i class="fa fa fa-code"></i>
+    <i class="fa fa fa-android"></i>
+    <i class="fa fa fa-apple"></i>
+    <i class="fa fa fa-windows"></i>
+  </div>
+  <div id="text-container">
+    <div id="Div_textService">
+      <h1 id="textService">We <span id="txt02"> Drive</span> Innovation</h1>
+    </div>
+    <div class="text-container-C1">
+      <p>
+
+        We focus on long-term to help your businesses prepare for the future. Innovation drives progress and introduces
+        novel solutions, ensuring businesses stay ahead.
+        We offers solutions that adapt and grow alongside the business, regardless of its size and serves as the
+        backbone of your business’s digital infrastructure to provides stability, scalability, and support
+        <a href="https://www.officesolutionsit.com.au/blog/why-is-it-important-in-business" target="_blank">Learn More
+          <i class="fa fa fa-external-link"></i></a>
+      </p>
+      <img src="./sapiens.svg">
+    </div>
+    <div class="text-container-C1">
+      <img src="./logo/sapiens2.svg">
+      <p>
+        We doesn’t just provide technology we transforms businesses to take them beyond their existing
+        limitations.Connect. Create. Cultivate – Your Pathway to Digital..!
+        <a href="./Contact-Us.html">Get a Free Quote Now <i class="fa fa fa-envelope"></i></a>
+      </p>
+
+    </div>
+  </div>
+  <div class="footer">
+    <div class="container2">
+      <div class="footer-row">
+        <div class="footer-col">
+          <h4>get help</h4>
+          <ul>
+            <li><a href="https://ameerhumza.web.app/Contact-Us.html">FAQ</a></li>
+            <li><a href="https://github.com/ameerhamza0252">Projects</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <div class="social-links">
+            <a href="https://www.linkedin.com/in/ameer-hamza-b7804523b/"><i class="fa fa-fw fa-linkedin"></i></a>
+            <a href="https://github.com/ameerhamza0252"><i class="fa fa-fw fa-github"></i></a>
+            <a href="https://www.instagram.com/ameer_hamza_aka_hamo/"><i class="fa fa-fw fa-instagram"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+    </footer>
+    <script>
+const canvas = document.getElementById("gravityCanvas");
+const ctx = canvas.getContext("2d");
+
+const TRAIL_LENGTH = 8;
+let particles = [];
+let mouse = { x: 0, y: 0, active: false };
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  createParticles(canvas.width, canvas.height);
+}
+
+function createParticles(width, height) {
+  const count = Math.min(Math.floor((width * height) / 8000), 100);
+  particles = [];
+
+  for (let i = 0; i < count; i++) {
+    const hue = 180 + Math.random() * 200;
+
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 2,
+      vy: (Math.random() - 0.5) * 2,
+      size: Math.random() * 2 + 3,
+      color: `hsla(128, 66%, 48%, 1)`,
+      distance: Math.random() * 100 + 100,
+      history: []
+    });
+  }
+}
+
+window.addEventListener("resize", resizeCanvas);
+
+window.addEventListener("mousemove", (e) => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+  mouse.active = true;
+});
+
+window.addEventListener("mouseleave", () => {
+  mouse.active = false;
+});
+
+resizeCanvas();
+
+function animate() {
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach(p => {
+
+    // Store trail
+    p.history.push({ x: p.x, y: p.y });
+    if (p.history.length > TRAIL_LENGTH) {
+      p.history.shift();
+    }
+
+    if (mouse.active) {
+      const dx = p.x - mouse.x;
+      const dy = p.y - mouse.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < 500) {
+        const targetRadius = p.distance;
+        const distError = dist - targetRadius;
+
+        // Centripetal
+        const pullStrength = 0.001;
+        p.vx -= dx * pullStrength * (distError / 50);
+        p.vy -= dy * pullStrength * (distError / 50);
+
+        // Tangential (orbit)
+        const orbitSpeed = 0.1;
+        const speedFactor = Math.max(0.1, (800 - dist) / 800);
+
+        if (dist !== 0) {
+          p.vx += (-dy / dist) * orbitSpeed * speedFactor;
+          p.vy += (dx / dist) * orbitSpeed * speedFactor;
+        }
+      }
+
+      p.vx *= 0.985;
+      p.vy *= 0.985;
+
+    } else {
+      p.vx += (Math.random() - 0.5) * 0.1;
+      p.vy += (Math.random() - 0.5) * 0.1;
+      p.vx *= 0.995;
+      p.vy *= 0.995;
+    }
+
+    // Update position
+    p.x += p.vx;
+    p.y += p.vy;
+
+    // Screen wrap
+    if (p.x < -50) p.x = canvas.width + 50;
+    if (p.x > canvas.width + 50) p.x = -50;
+    if (p.y < -50) p.y = canvas.height + 50;
+    if (p.y > canvas.height + 50) p.y = -50;
+
+    // Draw trail
+    for (let i = 0; i < p.history.length - 1; i++) {
+      const opacity = (i / p.history.length) * 0.5;
+      const point = p.history[i];
+      const nextPoint = p.history[i + 1];
+
+      ctx.beginPath();
+      ctx.moveTo(point.x, point.y);
+      ctx.lineTo(nextPoint.x, nextPoint.y);
+      ctx.lineWidth = p.size * (i / p.history.length);
+      ctx.strokeStyle = p.color.replace("1)", `${opacity})`);
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.stroke();
+    }
+
+    // Draw head
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = p.color;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
+    <script src="./script.js"></script>
+    <script src="./header.js"></script>
+    <script type="module">
+      // Import the functions you need from the SDKs you need
+      import { initializeApp } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-app.js";
+      import { getAnalytics } from "https://www.gstatic.com/firebasejs/10.3.0/firebase-analytics.js";
+      // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      const firebaseConfig = {
+        apiKey: "AIzaSyAblKsTPAqMVffkMp2CuPrXYPJgzVX61D0",
+        authDomain: "ameerhamza-6a444.firebaseapp.com",
+        projectId: "ameerhamza-6a444",
+        storageBucket: "ameerhamza-6a444.appspot.com",
+        messagingSenderId: "685732642072",
+        appId: "1:685732642072:web:98913c61297ea90f14f26d",
+        measurementId: "G-1EC5WWRPBM"
+      };
+
+      // Initialize Firebase
+      const app = initializeApp(firebaseConfig);
+      const analytics = getAnalytics(app);
+    </script>
+</body>
+
+</html>

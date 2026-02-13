@@ -1,0 +1,113 @@
+#svg-laptop,.banner_text{
+    animation-duration:2s;
+    animation-timing-function: ease-in;
+    animation-delay:0s;
+    animation-iteration-count:1;
+    animation-name: slideIn;       
+}
+.thingBox{
+  position: absolute;
+  top: 20%;
+  bottom: 30%;
+  width:100px;
+  min-height:60vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gear{
+  position: absolute;
+  height: 40rem;
+  width: 40rem;
+  right: 85%;
+  animation:rotation;
+  animation-duration:20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+.gear2{
+  position: absolute;
+  height: 40rem;
+  width: 40rem;
+  left: 85%;
+  animation:rotation;
+  animation-duration:20s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes rotation {
+  to{
+    transform: rotate(0deg);
+ 
+  }
+  from{
+    transform: rotate(180deg);
+    
+  }
+}
+
+.thing {
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+  border-radius: 10%;
+  font-size: large;
+  margin-bottom: 10px;
+  background-color: var(--primary-color);
+  animation-name: blink;
+  animation-duration:5s;
+  animation-delay: 1s;
+  animation-iteration-count: infinite;
+  box-shadow: 0 0 5px var(--primary-color);
+
+}
+.thing:nth-child(1) {animation-delay: 0.0s; }
+.thing:nth-child(2) {animation-delay: 0.5s; }
+.thing:nth-child(3) {animation-delay: 1.0s; }
+.thing:nth-child(4) {animation-delay: 1.5s; }
+.thing:nth-child(5) {animation-delay: 2.0s; }
+.thing:nth-child(6) {animation-delay: 2.5s; }
+
+/* Animation */
+@keyframes blink {
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes slideIn{
+    0% {
+      transform: translateY(-50%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+.reveal{
+  transform: translateY(150px);
+  opacity: 0;
+  transition: 1s all ease;
+}
+
+.reveal.active{
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.progress-bar-container {
+  position: absolute;
+  bottom:0;
+  left:0;
+  width: 100%;
+  height: 4px;
+  background-color: #fff;
+  z-index: 9999;
+}
+
+.progress-bar {
+  height: 100%;
+  background-color: var(--primary-color);
+  transition: all 0.3s ease;
+}
