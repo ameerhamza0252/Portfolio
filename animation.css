@@ -7,6 +7,8 @@
 }
 .thingBox{
   position: absolute;
+  top: 20%;
+  bottom: 30%;
   width:100px;
   min-height:60vh;
   display: flex;

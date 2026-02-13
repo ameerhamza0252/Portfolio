@@ -5,11 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="HandheldFriendly" content="true"/>
+  <meta name="HandheldFriendly" content="true" />
   <meta name="language" content="english">
   <meta name="Author" content="Ameer Hamza">
-  <meta name="description" content="Ameer Hamza's software development portfolio expertise in HTML, CSS, JavaScript, ReactJS and Bootstrap.Hire Ameer Hamza as you web developer">
-  <meta name="rating" content="safe for kids"> 
+  <meta name="description"
+    content="Ameer Hamza's software development portfolio expertise in HTML, CSS, JavaScript, ReactJS and Bootstrap.Hire Ameer Hamza as you web developer">
+  <meta name="rating" content="safe for kids">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="shortcut icon" href="./logo/logo2.svg" />
   <link href='https://fonts.googleapis.com/css?family=Biryani' rel='stylesheet'>
@@ -19,7 +20,31 @@
   <link rel="stylesheet" href="style.css" type="text/css">
   <link rel="stylesheet" href="./text.css" type="text/css">
   <link rel="stylesheet" href="./animation.css" type="text/css">
+<style>
+  .banner_text {
+    position: relative; /* Required so the absolute canvas stays inside here */
+    overflow: hidden;   /* Prevents particles from bleeding out */
+  }
 
+  #gravityCanvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Sits above the background image, but below the text */
+    pointer-events: none; /* Allows you to still click buttons/text through the canvas */
+  }
+
+  /* Ensure your text/SVG content is above the canvas */
+  #svg_and_text {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left:  50%;
+    z-index: 2;
+  }
+</style>
   <title>Ameer Hamza</title>
 </head>
 
@@ -33,17 +58,17 @@
   <header class="header">
     <div>
       <a href="https://ameerhumza.web.app/">
-          <img src="./logo/logo.svg" alt="ameerhamza-logo" id='header_logo' > 
-        </a> 
-  </div>
-  <button id="btn_nav" onclick="menu()"><i class="fa fa-fw fa-bars"></i></button>
-  <div class="header_list" id="top">
+        <img src="./logo/logo.svg" alt="ameerhamza-logo" id='header_logo'>
+      </a>
+    </div>
+    <button id="btn_nav" onclick="menu()"><i class="fa fa-fw fa-bars"></i></button>
+    <div class="header_list" id="top">
       <ul>
-          <li><a href="https://ameerhumza.web.app/"><i class="fa fa-fw fa-home" ></i>Home</a></li>
-          <li><a href="https://ameerhumza.web.app/#service_box"><i class="fa fa-fw fa-briefcase"></i>Services</a></li>
-          <li><a href="https://ameerhumza.web.app/Contact-Us.html"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
+        <li><a href="https://ameerhumza.web.app/"><i class="fa fa-fw fa-home"></i>Home</a></li>
+        <li><a href="https://ameerhumza.web.app/#service_box"><i class="fa fa-fw fa-briefcase"></i>Services</a></li>
+        <li><a href="https://ameerhumza.web.app/Contact-Us.html"><i class="fa fa-fw fa-envelope"></i>Contact</a></li>
       </ul>
-  </div>
+    </div>
     <div class="progress-bar-container">
       <div class="progress-bar"></div>
     </div>
@@ -52,8 +77,9 @@
 
 
   <div class="banner">
+   
     <div class="banner_text">
-      <div>
+      <div id="svg_and_text">
         <svg id="svg-laptop" height="150px" width="150px" viewBox="0 -297 1618 1618" class="icon" version="1.1"
           xmlns="http://www.w3.org/2000/svg" fill="#000000">
           <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
@@ -84,6 +110,8 @@
             href="https://www.linkedin.com/in/ameer-hamza-b7804523b/" target="_blank">Linkedin<i
               class="fa fa-fw fa-linkedin-square"></i></a></span>
       </div>
+      <!-- Gravity particle canvas (used by the background animation script) -->
+       
       <div class="thingBox">
         <div class="thing"></div>
         <div class="thing"></div>
@@ -92,10 +120,10 @@
         <div class="thing"></div>
         <div class="thing"></div>
       </div>
+      <canvas id="gravityCanvas"></canvas>
     </div>
 
   </div>
-  <div id="line"></div>
   <div id="Div_textService">
     <h1 id="textService">Our <span id="txt02">Services</span></h1>
   </div>
@@ -160,9 +188,9 @@
         <p class="cardText">Asthethic and Functional Designs</p>
       </div>
       <div class="gear">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">
-          <path fill="#ddd" fill-rule="evenodd" 
-          d="M110 0c5.523 0 10 4.477 10 10v17.574c0 8.909 10.771 13.37 17.071
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">
+          <path fill="#ddd" fill-rule="evenodd" d="M110 0c5.523 0 10 4.477 10 10v17.574c0 8.909 10.771 13.37 17.071
            7.07l12.426-12.426c3.906-3.905 10.237-3.905 14.143 0l14.142 14.142c3.905 3.906
             3.905 10.237 0 14.142L165.355 62.93c-6.299 6.3-1.838 17.071 7.071 17.071H190c5.523 
             0 10 4.477 10 10v20c0 5.523-4.477 10-10 10h-17.574c-8.909 0-13.37 10.771-7.071 17.071l12.427
@@ -173,12 +201,13 @@
                4.477-10 10-10h17.574c8.909 0 13.37-10.771 7.07-17.071L22.219 50.502c-3.905-3.905-3.905-10.236 0-14.142L36.36 22.218c3.906-3.905 
                10.237-3.905 14.142 0L62.93 34.645c6.3 6.3 17.071 1.838 17.071-7.071V10c0-5.523 4.477-10 10-10h20Zm-10 150c27.614 0 50-22.386 
                50-50s-22.386-50-50-50-50 22.386-50 50 22.386 50 50 50Z" clip-rule="evenodd">
-          </path></svg>
+          </path>
+        </svg>
       </div>
       <div class="gear2">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" version="1.1" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">
-          <path fill="#ddd" fill-rule="evenodd" 
-          d="M110 0c5.523 0 10 4.477 10 10v17.574c0 8.909 10.771 13.37 17.071
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 200 200" version="1.1"
+          xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs">
+          <path fill="#ddd" fill-rule="evenodd" d="M110 0c5.523 0 10 4.477 10 10v17.574c0 8.909 10.771 13.37 17.071
            7.07l12.426-12.426c3.906-3.905 10.237-3.905 14.143 0l14.142 14.142c3.905 3.906
             3.905 10.237 0 14.142L165.355 62.93c-6.299 6.3-1.838 17.071 7.071 17.071H190c5.523 
             0 10 4.477 10 10v20c0 5.523-4.477 10-10 10h-17.574c-8.909 0-13.37 10.771-7.071 17.071l12.427
@@ -189,15 +218,16 @@
                4.477-10 10-10h17.574c8.909 0 13.37-10.771 7.07-17.071L22.219 50.502c-3.905-3.905-3.905-10.236 0-14.142L36.36 22.218c3.906-3.905 
                10.237-3.905 14.142 0L62.93 34.645c6.3 6.3 17.071 1.838 17.071-7.071V10c0-5.523 4.477-10 10-10h20Zm-10 150c27.614 0 50-22.386 
                50-50s-22.386-50-50-50-50 22.386-50 50 22.386 50 50 50Z" clip-rule="evenodd">
-          </path></svg>
+          </path>
+        </svg>
       </div>
     </div>
-   
+
   </div>
 
   <section id="section-container">
     <div id="Div_textService">
-      <h1 id="textService">Developement  <span id="txt02">Process</span></h1>
+      <h1 id="textService">Developement <span id="txt02">Process</span></h1>
     </div>
     <section id="conference-timeline">
       <div class="timeline-start">Start</div>
@@ -208,12 +238,14 @@
         <div class="timeline-article">
           <div class="content-left-container">
             <div class="content-left">
-              <p><span class="article-number"><i class="fa fa fa-search"></i> Research</span>Gather information about project requirements</p>
+              <p><span class="article-number"><i class="fa fa fa-search"></i> Research</span>Gather information about
+                project requirements</p>
             </div>
           </div>
           <div class="content-right-container">
             <div class="content-right">
-              <p><span class="article-number"><i class="fa fa-line-chart"></i> Analysis</span>Evaluate technical feasibility and potential challenges</p>
+              <p><span class="article-number"><i class="fa fa-line-chart"></i> Analysis</span>Evaluate technical
+                feasibility and potential challenges</p>
             </div>
           </div>
           <div class="meta-data">
@@ -224,12 +256,14 @@
         <div class="timeline-article">
           <div class="content-left-container">
             <div class="content-left">
-              <p><span class="article-number"><i class="fa fa fa-paint-brush"></i> Designing</span>Brainstorm ideas and create a preliminary design</p>
+              <p><span class="article-number"><i class="fa fa fa-paint-brush"></i> Designing</span>Brainstorm ideas and
+                create a preliminary design</p>
             </div>
           </div>
           <div class="content-right-container">
             <div class="content-right">
-              <p><span class="article-number"><i class="fa fa fa-sliders"></i> Prototyping</span>Develop prototypes to visualize and refine the design</p>
+              <p><span class="article-number"><i class="fa fa fa-sliders"></i> Prototyping</span>Develop prototypes to
+                visualize and refine the design</p>
             </div>
           </div>
           <div class="meta-data">
@@ -240,12 +274,14 @@
         <div class="timeline-article">
           <div class="content-left-container">
             <div class="content-left">
-              <p><span class="article-number"><i class="fa fa fa-keyboard-o"></i> Developing</span>Write code according to the design specifications</p>
+              <p><span class="article-number"><i class="fa fa fa-keyboard-o"></i> Developing</span>Write code according
+                to the design specifications</p>
             </div>
           </div>
           <div class="content-right-container">
             <div class="content-right">
-              <p> <span class="article-number"><i class="fa fa fa-gears"></i> Testing</span>Conduct thorough testing to identify and fix bugs or errors</p>
+              <p> <span class="article-number"><i class="fa fa fa-gears"></i> Testing</span>Conduct thorough testing to
+                identify and fix bugs or errors</p>
             </div>
           </div>
           <div class="meta-data">
@@ -334,8 +370,8 @@
       </div>
     </div>
   </div>
-    
-  <div class="client-review-box"> 
+
+  <div class="client-review-box">
     <i class="fa fa fa-wordpress"></i>
     <i class="fa fa fa-html5"></i>
     <i class="fa fa fa-css3"></i>
@@ -351,23 +387,27 @@
     <div id="Div_textService">
       <h1 id="textService">We <span id="txt02"> Drive</span> Innovation</h1>
     </div>
-    <div class="text-container-C1">  
-    <p>
-     
-      We focus on long-term to help your businesses prepare for the future. Innovation drives progress and introduces novel solutions, ensuring businesses stay ahead.
-      We offers solutions that adapt and grow alongside the business, regardless of its size and serves as the backbone of your business’s digital infrastructure to provides stability, scalability, and support
-    <a href="https://www.officesolutionsit.com.au/blog/why-is-it-important-in-business" target="_blank">Learn More <i class="fa fa fa-external-link"></i></a>
-    </p>
-   <img src="./sapiens.svg">
-  </div>
-  <div class="text-container-C1">  
-    <img src="./logo/sapiens2.svg">
-    <p>
-      We doesn’t just provide technology we transforms businesses to take them beyond their existing limitations.Connect. Create. Cultivate – Your Pathway to Digital..!
-      <a href="./Contact-Us.html">Get a Free Quote Now <i class="fa fa fa-envelope"></i></a>
-    </p>
-   
-  </div>
+    <div class="text-container-C1">
+      <p>
+
+        We focus on long-term to help your businesses prepare for the future. Innovation drives progress and introduces
+        novel solutions, ensuring businesses stay ahead.
+        We offers solutions that adapt and grow alongside the business, regardless of its size and serves as the
+        backbone of your business’s digital infrastructure to provides stability, scalability, and support
+        <a href="https://www.officesolutionsit.com.au/blog/why-is-it-important-in-business" target="_blank">Learn More
+          <i class="fa fa fa-external-link"></i></a>
+      </p>
+      <img src="./sapiens.svg">
+    </div>
+    <div class="text-container-C1">
+      <img src="./logo/sapiens2.svg">
+      <p>
+        We doesn’t just provide technology we transforms businesses to take them beyond their existing
+        limitations.Connect. Create. Cultivate – Your Pathway to Digital..!
+        <a href="./Contact-Us.html">Get a Free Quote Now <i class="fa fa fa-envelope"></i></a>
+      </p>
+
+    </div>
   </div>
   <div class="footer">
     <div class="container2">
@@ -378,7 +418,7 @@
             <li><a href="https://ameerhumza.web.app/Contact-Us.html">FAQ</a></li>
             <li><a href="https://github.com/ameerhamza0252">Projects</a></li>
           </ul>
-        </div>  
+        </div>
         <div class="footer-col">
           <h4>Contact</h4>
           <div class="social-links">
@@ -390,6 +430,141 @@
       </div>
     </div>
     </footer>
+    <script>
+const canvas = document.getElementById("gravityCanvas");
+const ctx = canvas.getContext("2d");
+
+const TRAIL_LENGTH = 8;
+let particles = [];
+let mouse = { x: 0, y: 0, active: false };
+
+function resizeCanvas() {
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+  createParticles(canvas.width, canvas.height);
+}
+
+function createParticles(width, height) {
+  const count = Math.min(Math.floor((width * height) / 8000), 100);
+  particles = [];
+
+  for (let i = 0; i < count; i++) {
+    const hue = 180 + Math.random() * 200;
+
+    particles.push({
+      x: Math.random() * width,
+      y: Math.random() * height,
+      vx: (Math.random() - 0.5) * 2,
+      vy: (Math.random() - 0.5) * 2,
+      size: Math.random() * 2 + 3,
+      color: `hsla(128, 66%, 48%, 1)`,
+      distance: Math.random() * 100 + 100,
+      history: []
+    });
+  }
+}
+
+window.addEventListener("resize", resizeCanvas);
+
+window.addEventListener("mousemove", (e) => {
+  mouse.x = e.clientX;
+  mouse.y = e.clientY;
+  mouse.active = true;
+});
+
+window.addEventListener("mouseleave", () => {
+  mouse.active = false;
+});
+
+resizeCanvas();
+
+function animate() {
+ ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  particles.forEach(p => {
+
+    // Store trail
+    p.history.push({ x: p.x, y: p.y });
+    if (p.history.length > TRAIL_LENGTH) {
+      p.history.shift();
+    }
+
+    if (mouse.active) {
+      const dx = p.x - mouse.x;
+      const dy = p.y - mouse.y;
+      const dist = Math.sqrt(dx * dx + dy * dy);
+
+      if (dist < 500) {
+        const targetRadius = p.distance;
+        const distError = dist - targetRadius;
+
+        // Centripetal
+        const pullStrength = 0.001;
+        p.vx -= dx * pullStrength * (distError / 50);
+        p.vy -= dy * pullStrength * (distError / 50);
+
+        // Tangential (orbit)
+        const orbitSpeed = 0.1;
+        const speedFactor = Math.max(0.1, (800 - dist) / 800);
+
+        if (dist !== 0) {
+          p.vx += (-dy / dist) * orbitSpeed * speedFactor;
+          p.vy += (dx / dist) * orbitSpeed * speedFactor;
+        }
+      }
+
+      p.vx *= 0.985;
+      p.vy *= 0.985;
+
+    } else {
+      p.vx += (Math.random() - 0.5) * 0.1;
+      p.vy += (Math.random() - 0.5) * 0.1;
+      p.vx *= 0.995;
+      p.vy *= 0.995;
+    }
+
+    // Update position
+    p.x += p.vx;
+    p.y += p.vy;
+
+    // Screen wrap
+    if (p.x < -50) p.x = canvas.width + 50;
+    if (p.x > canvas.width + 50) p.x = -50;
+    if (p.y < -50) p.y = canvas.height + 50;
+    if (p.y > canvas.height + 50) p.y = -50;
+
+    // Draw trail
+    for (let i = 0; i < p.history.length - 1; i++) {
+      const opacity = (i / p.history.length) * 0.5;
+      const point = p.history[i];
+      const nextPoint = p.history[i + 1];
+
+      ctx.beginPath();
+      ctx.moveTo(point.x, point.y);
+      ctx.lineTo(nextPoint.x, nextPoint.y);
+      ctx.lineWidth = p.size * (i / p.history.length);
+      ctx.strokeStyle = p.color.replace("1)", `${opacity})`);
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.stroke();
+    }
+
+    // Draw head
+    ctx.beginPath();
+    ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+    ctx.fillStyle = p.color;
+    ctx.shadowBlur = 15;
+    ctx.shadowColor = p.color;
+    ctx.fill();
+    ctx.shadowBlur = 0;
+
+  });
+
+  requestAnimationFrame(animate);
+}
+
+animate();
+</script>
     <script src="./script.js"></script>
     <script src="./header.js"></script>
     <script type="module">
